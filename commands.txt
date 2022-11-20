@@ -1,0 +1,12 @@
+docker ps - view running container
+docker images - view all images
+docker run "image:version" - pull and run a new container
+docker start "conatinerId" - start the stopped container
+docker stop "conatinerId" - stop the running container
+docker network ls - shows list of network
+docker network create "network-name" - craeates a new network
+-d - detached, runs in background
+-p host:container - to specify port number
+-e - env variables
+--name - name a container
+--net "existing network-name" : run a container and connect to the network
