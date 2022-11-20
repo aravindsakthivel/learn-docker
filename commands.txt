@@ -1,3 +1,6 @@
+version === tag
+name === imageName
+
 docker ps - view running container
 docker images - view all images
 docker run "image:version" - pull and run a new container
@@ -5,8 +8,20 @@ docker start "conatinerId" - start the stopped container
 docker stop "conatinerId" - stop the running container
 docker network ls - shows list of network
 docker network create "network-name" - craeates a new network
+docker-compose up -d - if compose file is created with name as docker-compose
+docker build -t name:version . - to build docker image give name and directory
+docker rmi "imageId" - delete image
+docker exec -t "imageId" "/bin/bash" or "/bin/sh" - to use the terminal inside the container
+docker tag "imageId" or "imageName:tag" registryDomain/imageName:tag - register the image before pushing it the artifactory 
+docker push registryDomain/imageName:tag - will push the image to artifactory without the registryDomain will try to push to docker hub
+docker run -v host-directory:container-directory - to create volume for ost-directory only give a "name"
 -d - detached, runs in background
 -p host:container - to specify port number
 -e - env variables
 --name - name a container
---net "existing network-name" : run a container and connect to the network
+--net "existing network-name" - run a container and connect to the network
+-f - if compose file is a different name use "-f fileName.yml or fileName.yaml"
+up - start the docker-compose container
+down - stop the docker-compose container
+\ - for next line
+-t - name of the node app

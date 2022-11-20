@@ -1,0 +1,27 @@
+# for docker-compose network doesn't needs to be created in compose file automatically taken care of.
+
+version: "1.0"
+services:
+  mongodb:
+    # name of the container === --name
+    image: path:version # image url
+    container_name: mongodb # name can be specified here too
+    ports:
+      - 3001:3001 # host:container port
+    environment:
+      # environment variables
+      - KEY=VALUE
+    volumes:
+      - host-directory:container-directory
+  mongodb2:
+    # name of the container === --name
+    image: path:version # image url
+    container_name: mongodb # name can be specified here too
+    ports:
+      - 3001:3001 # host:container port
+    environment:
+      # environment variables
+      - KEY=VALUE
+volumes:
+  host-directory:
+    driver: local # mention the driver location without mentioning automatically uses local

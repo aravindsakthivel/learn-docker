@@ -1,0 +1,2 @@
+docker-compose : consist of docker command
+Dockerfile: blueprint of a docker image
